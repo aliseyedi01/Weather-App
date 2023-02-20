@@ -80,27 +80,46 @@ searchBtn.addEventListener("click", forecastDay);
 async function forecastDay(e) {
   e.preventDefault();
   const city = document.querySelector(".get-city").value;
-  const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY2}&q=${city}&days=7&aqi=no&alerts=no`;
-  // console.log(url);
-  // fetch
-  const response = await fetch(url);
-  let data = await response.json();
-  // console.log(data);
-  // function
-  forecastHourly(data);
-  selectForecast(data);
-  directionWind(data);
-  informationCity(data);
-  nightDay(data);
-  sunTime(data);
-  getUvIndex(data);
-  humidity(data);
-  speedWind(data);
-  visibility(data);
-  descriptionDay(data);
-  maxMinTemperature(data);
-  descriptionImage(data);
-  darkMode(data);
+
+  try {
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY2}&q=${city}&days=7&aqi=no&alerts=no`;
+    console.log(url);
+
+    const response = await fetch(url);
+
+    if (!response.ok) {
+      throw new Error("Bad response from server");
+    }
+
+    let data = await response.json();
+    console.log(data);
+
+    errorText.classList.add("hidden");
+
+    // function
+    forecastHourly(data);
+    selectForecast(data);
+    directionWind(data);
+    informationCity(data);
+    nightDay(data);
+    sunTime(data);
+    getUvIndex(data);
+    humidity(data);
+    speedWind(data);
+    visibility(data);
+    descriptionDay(data);
+    maxMinTemperature(data);
+    descriptionImage(data);
+    darkMode(data);
+    // return data;
+  } catch (error) {
+    // console.error(error);
+    errorText.classList.remove("hidden");
+    console.log("error");
+
+    weatherImage.setAttribute("src", `./src/img/error/error.png`);
+    // weatherImage.setAttribute("src", `./src/img/weather/day/113.png`)
+  }
 }
 
 // Max-Min Temperature
@@ -475,7 +494,7 @@ async function searchImage() {
   const city = document.querySelector(".get-city").value;
 
   const url = `https://api.unsplash.com/search/photos?query=${city}&per_page=30&client_id=${keyUnsplash}`;
-  console.log(url);
+  // console.log(url);
   // fetch
   const response = await fetch(url);
   let data = await response.json();
@@ -485,7 +504,7 @@ async function searchImage() {
   // console.log(index);
 
   let srcImage = `${data.results[index].urls.raw}&w=600&h=400`;
-  console.log(srcImage);
+  // console.log(srcImage);
 
   searchImg.setAttribute("src", srcImage);
 }
