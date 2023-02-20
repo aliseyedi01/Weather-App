@@ -83,7 +83,7 @@ async function forecastDay(e) {
 
   try {
     const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY2}&q=${city}&days=7&aqi=no&alerts=no`;
-    console.log(url);
+    // console.log(url);
 
     const response = await fetch(url);
 
@@ -92,7 +92,7 @@ async function forecastDay(e) {
     }
 
     let data = await response.json();
-    console.log(data);
+    // console.log(data);
 
     errorText.classList.add("hidden");
 
@@ -113,12 +113,10 @@ async function forecastDay(e) {
     darkMode(data);
     // return data;
   } catch (error) {
-    // console.error(error);
     errorText.classList.remove("hidden");
     console.log("error");
 
     weatherImage.setAttribute("src", `./src/img/error/error.png`);
-    // weatherImage.setAttribute("src", `./src/img/weather/day/113.png`)
   }
 }
 
@@ -135,11 +133,6 @@ function maxMinTemperature(data) {
 function descriptionDay(data) {
   let temp = data.current.temp_c;
   let weather = data.current.condition.text;
-
-  // weather image
-  // const srcImg = data.current.condition.icon;
-  // console.log(srcImg);
-  // weatherImage.setAttribute("src", srcImg);
 
   setInnerText("weather", weather);
   setInnerText("temp", temp);
@@ -269,15 +262,10 @@ function sunTime(data) {
     let fullTime = 86400;
     let durationNight = fullTime - secondSunset + secondSunriseTomorrow;
 
-    // console.log(Number(localTime.split(":")[0]) >= 12);
-    // console.log(Number(localTime.split(":")[0]) < 12);
-
     let percentNight;
     if (Number(localTime.split(":")[0]) >= 12) {
-      // console.log("24");
       percentNight = (secondLocalTime - secondSunset) / durationNight;
     } else {
-      // console.log("00");
       percentNight = secondLocalTime + (fullTime - secondSunset) / durationNight;
     }
 
@@ -352,7 +340,7 @@ function forecastHourly(data) {
     let card = document.createElement("div");
     let timeTemp = data.forecast.forecastday[0].hour[hour].time.slice(11);
     let iconTemp = data.forecast.forecastday[0].hour[hour].condition.icon;
-    // console.log(timeTemp);
+
     let maxTemp = data.forecast.forecastday[0].hour[hour].temp_c;
     // create card
     card.innerHTML = `
@@ -374,11 +362,11 @@ function forecastWeekly(data) {
   for (let i = 0; i < 7; i++) {
     let card = document.createElement("div");
     let dateDay = data.forecast.forecastday[day].date;
-    // console.log(nameDay);
+
     let date = new Date(dateDay);
-    // console.log(dat1, typeof dat1);
+
     let nameDay = date.toString().split(" ")[0];
-    // console.log(dat2);
+
     let iconTemp = data.forecast.forecastday[day].day.condition.icon;
     let averageTemp = data.forecast.forecastday[day].day.avgtemp_c;
     // create card
@@ -404,7 +392,6 @@ forecastHour.addEventListener("wheel", (evt) => {
 function directionWind(data) {
   let nameDir = data.current.wind_dir;
   let windDeg = data.current.wind_degree;
-  // console.log(windDeg);
 
   degWind.style.setProperty("--deg", `${windDeg}deg`);
 
@@ -468,12 +455,10 @@ daySky();
 // weather image day
 function descriptionImage(data) {
   const srcImg = data.current.condition.icon;
-  // console.log(srcImg, typeof srcImg);
 
   let dayOrNight = srcImg.split("/")[5];
-  // console.log(dayOrNight);
+
   let number = srcImg.split("/")[6].split(".")[0];
-  // console.log(number);
 
   let newSrcImg;
   if (dayOrNight === "day") {
@@ -494,17 +479,14 @@ async function searchImage() {
   const city = document.querySelector(".get-city").value;
 
   const url = `https://api.unsplash.com/search/photos?query=${city}&per_page=30&client_id=${keyUnsplash}`;
-  // console.log(url);
+
   // fetch
   const response = await fetch(url);
   let data = await response.json();
-  // console.log(data);
 
   let index = Math.floor(Math.random() * 30);
-  // console.log(index);
 
   let srcImage = `${data.results[index].urls.raw}&w=600&h=400`;
-  // console.log(srcImage);
 
   searchImg.setAttribute("src", srcImage);
 }
