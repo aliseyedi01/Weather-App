@@ -458,9 +458,9 @@ function descriptionImage(data) {
 
   let newSrcImg;
   if (dayOrNight === "day") {
-    newSrcImg = `/src/img/weather/day/${number}.png`;
+    newSrcImg = `./src/img/weather/day/${number}.png`;
   } else {
-    newSrcImg = `/src/img/weather/night/${number}.png`;
+    newSrcImg = `./src/img/weather/night/${number}.png`;
   }
   weatherImage.setAttribute("src", newSrcImg);
 }
