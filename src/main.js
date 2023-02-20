@@ -255,10 +255,10 @@ function sunTime(data) {
 
     let percentNight;
     if (Number(localTime.split(":")[0]) >= 12) {
-      console.log("24");
+      // console.log("24");
       percentNight = (secondLocalTime - secondSunset) / durationNight;
     } else {
-      console.log("00");
+      // console.log("00");
       percentNight = secondLocalTime + (fullTime - secondSunset) / durationNight;
     }
 
@@ -479,7 +479,7 @@ async function searchImage() {
   // fetch
   const response = await fetch(url);
   let data = await response.json();
-  console.log(data);
+  // console.log(data);
 
   let index = Math.floor(Math.random() * 30);
   // console.log(index);
