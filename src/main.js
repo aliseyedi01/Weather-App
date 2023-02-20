@@ -24,7 +24,7 @@ const hourlyBtn = document.querySelector(".hourly-btn");
 const sunRotate = document.querySelector(".sun-rotate");
 // key Api
 const API_KEY2 = `8e9f91f36f3446df82b94432231502`;
-const API_Google = `AIzaSyAa6mJwGMuPMMBKQeWbHNaxpE-zjaE5lvk`;
+
 // dark mode : theme check
 const themeCheck = () => {
   if (userTheme === "dark" || (!userTheme && systemTheme)) {
