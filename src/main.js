@@ -62,16 +62,14 @@ function DayAndTimeToday() {
   setInnerText("today", today);
 }
 DayAndTimeToday();
-// time now
-function timeNow() {
-  let t = new Date();
-  let time = t.toString().split(" ")[4].slice(0, 8);
-  setInnerText("time", time);
-  let run = setTimeout(() => {
-    timeNow();
-  }, 1000);
+
+// update time and shot it
+function updateTime() {
+  const currentTime = new Date().toLocaleTimeString([], { timeStyle: "short" });
+  setInnerText("time", currentTime);
 }
-timeNow();
+setInterval(updateTime, 1000);
+
 // API -------------------
 // action search
 searchBtn.addEventListener("click", forecastDay);
@@ -83,41 +81,41 @@ async function forecastDay(e) {
 
   try {
     const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY2}&q=${city}&days=7&aqi=no&alerts=no`;
-    // console.log(url);
-
     const response = await fetch(url);
 
     if (!response.ok) {
       throw new Error("Bad response from server");
     }
 
-    let data = await response.json();
-    // console.log(data);
-
-    errorText.classList.add("hidden");
-
-    // function
-    forecastHourly(data);
-    selectForecast(data);
-    directionWind(data);
-    informationCity(data);
-    nightDay(data);
-    sunTime(data);
-    getUvIndex(data);
-    humidity(data);
-    speedWind(data);
-    visibility(data);
-    descriptionDay(data);
-    maxMinTemperature(data);
-    descriptionImage(data);
-    darkMode(data);
-    // return data;
+    const data = await response.json();
+    handleForecastData(data);
   } catch (error) {
-    errorText.classList.remove("hidden");
-    console.log("error");
-
-    weatherImage.setAttribute("src", `./src/img/error/error.png`);
+    handleError();
   }
+}
+
+function handleForecastData(data) {
+  errorText.classList.add("hidden");
+  forecastHourly(data);
+  selectForecast(data);
+  directionWind(data);
+  informationCity(data);
+  nightDay(data);
+  sunTime(data);
+  getUvIndex(data);
+  humidity(data);
+  speedWind(data);
+  visibility(data);
+  descriptionDay(data);
+  maxMinTemperature(data);
+  descriptionImage(data);
+  darkMode(data);
+}
+
+function handleError() {
+  errorText.classList.remove("hidden");
+  console.log("error");
+  weatherImage.setAttribute("src", `./src/img/error/error.png`);
 }
 
 // Max-Min Temperature
