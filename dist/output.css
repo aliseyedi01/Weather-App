@@ -3370,7 +3370,7 @@ input[type="range"]::-ms-fill-upper {
 
 .day-sky img {
   position: absolute;
-  background: url(/src/img/sky/bird3.gif) no-repeat;
+  background: url(./src/img/sky/bird3.gif) no-repeat;
   background-size: 55%;
   left: -150px;
   padding: 60px;
