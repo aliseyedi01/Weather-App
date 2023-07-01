@@ -105,9 +105,9 @@ input[type="range"]::-ms-fill-upper {
   }
 }
 /* bird day sky */
-.day-sky img {
+/* .day-sky img {
   position: absolute;
-  background: url(./src/img/sky/bird3.gif) no-repeat;
+  background: url(./src/img/sky/bird.gif) no-repeat;
   background-size: 55%;
   left: -150px;
   padding: 60px;
@@ -118,13 +118,13 @@ input[type="range"]::-ms-fill-upper {
   opacity: 0.7;
   animation: bird 25s linear infinite;
   z-index: 90000;
-}
+} */
 
-@keyframes bird {
+/* @keyframes bird {
   from {
     left: -180px;
   }
   to {
     left: 200%;
   }
-}
+} */
