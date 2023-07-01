@@ -8,9 +8,15 @@
   box-sizing: border-box;
 }
 
-@layer utilities {
+@layer components {
   .active-btn {
     @apply border-b-2 border-red-900 text-yellow-400 dark:text-yellow-400;
+  }
+  .week-days {
+    @apply m-1 flex h-28 w-20 flex-col items-center justify-between rounded-md opacity-95 backdrop-blur-3xl backdrop-filter;
+  }
+  .week-days p {
+    @apply font-semibold text-black dark:text-yellow-500;
   }
 }
 

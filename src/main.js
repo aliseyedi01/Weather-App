@@ -20,6 +20,7 @@ const systemTheme = window.matchMedia("(prefers-color-scheme : dark").matches;
 const forecastHour = document.querySelector(".forecast-hour ");
 const weeklyBtn = document.querySelector(".weekly-btn");
 const hourlyBtn = document.querySelector(".hourly-btn");
+const weekDayContainer = document.querySelector(".week-days-container");
 // sunset & sunrise
 const sunRotate = document.querySelector(".sun-rotate");
 // key Api
@@ -488,3 +489,19 @@ async function searchImage() {
 
   searchImg.setAttribute("src", srcImage);
 }
+
+// forecast days
+
+const weekNames = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+weekNames.map((weekName) => {
+  let daysWeek = document.createElement("div");
+
+  daysWeek.innerHTML = `
+      <div class="week-days">
+        <p>${weekName}</p>
+        <img src="http://cdn.weatherapi.com/weather/64x64/day/113.png" />
+        <p class="text-black dark:text-white">0&#176;</p>
+      </div>
+    `;
+  weekDayContainer.appendChild(daysWeek);
+});
