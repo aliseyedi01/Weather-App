@@ -4,11 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>App weather</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/img/favIcon/favIcon.png" />
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
   <body>
     <!-- control main -->
-    <div class="relative flex h-max w-screen items-center justify-center overflow-y-scroll md:h-screen md:overflow-y-hidden">
+    <div
+      class="relative flex h-max w-screen items-center justify-center overflow-y-scroll md:h-screen md:overflow-y-hidden"
+    >
       <!-- main -->
       <div
         class="z-50 mt-2 flex h-[90%] w-[90%] flex-col rounded-md border border-red-400 bg-indigo-400 bg-opacity-40 bg-clip-padding p-2 backdrop-blur-2xl backdrop-filter md:mt-0 md:h-[75%] md:w-[70%] md:flex-row"
@@ -39,12 +42,16 @@
               </button>
               <!-- text error -->
               <div class="absolute left-3 -bottom-5">
-                <p class="text-error hidden text-sm font-bold text-red-800 dark:text-yellow-500">Oops! Invalid location</p>
+                <p class="text-error hidden text-sm font-bold text-red-800 dark:text-yellow-500">
+                  Oops! Invalid location
+                </p>
               </div>
             </div>
           </form>
           <!-- svg weather -->
-          <div class="flex h-40 w-40 items-center justify-center max-md:ml-[26%] md:h-72 md:w-full md:items-start">
+          <div
+            class="flex h-40 w-40 items-center justify-center max-md:ml-[26%] md:h-72 md:w-full md:items-start"
+          >
             <img class="weather-image h-3/4 w-3/4 pt-7 pr-2" src="./src/img/weather/day/113.png" />
           </div>
           <!-- tem , day , date -->
@@ -71,7 +78,12 @@
               <i class="fa-solid fa-location-dot text-[16px] text-blue-500 dark:text-gray-400"></i>
               <p class="text-sm font-bold capitalize text-yellow-400" id="country">country</p>
             </div>
-            <p class="z-20 text-3xl font-semibold capitalize text-white/75 text-opacity-10" id="city">city</p>
+            <p
+              class="z-20 text-3xl font-semibold capitalize text-white/75 text-opacity-10"
+              id="city"
+            >
+              city
+            </p>
             <img
               src="./src/img/cover/world.jpg"
               class="search-Image absolute inset-0 z-10 h-full w-full max-w-full rounded-lg bg-contain brightness-[0.65] md:h-full md:max-h-[250px] md:max-w-[250px]"
@@ -85,11 +97,15 @@
             <!-- weekly & hourly name -->
             <div class="flex flex-row gap-2 max-md:mt-2">
               <!-- hourly -->
-              <p class="hourly-btn active-btn cursor-pointer px-1 py-1 font-serif text-xs font-semibold text-yellow-600 focus:bg-blue-800 md:px-3 md:text-base">
+              <p
+                class="hourly-btn active-btn cursor-pointer px-1 py-1 font-serif text-xs font-semibold text-yellow-600 focus:bg-blue-800 md:px-3 md:text-base"
+              >
                 <i class="fa-solid fa-clock mr-1"></i>Hourly
               </p>
               <!-- weekly -->
-              <p class="weekly-btn text-sky-6000 cursor-pointer px-1 py-1 font-serif text-xs font-semibold text-yellow-600 focus:bg-blue-700 md:px-3 md:text-base">
+              <p
+                class="weekly-btn text-sky-6000 cursor-pointer px-1 py-1 font-serif text-xs font-semibold text-yellow-600 focus:bg-blue-700 md:px-3 md:text-base"
+              >
                 <i class="fa-solid fa-calendar-week mr-1"></i>weekly
               </p>
             </div>
@@ -113,43 +129,57 @@
           >
             <!-- forecast -->
             <!-- Saturday -->
-            <div class="m-1 flex h-28 w-20 flex-col items-center justify-between rounded-md opacity-95 backdrop-blur-3xl backdrop-filter">
+            <div
+              class="m-1 flex h-28 w-20 flex-col items-center justify-between rounded-md opacity-95 backdrop-blur-3xl backdrop-filter"
+            >
               <p class="font-semibold text-black dark:text-yellow-500">Sat</p>
               <img src="http://cdn.weatherapi.com/weather/64x64/day/113.png" class="" />
               <p class="text-black dark:text-white">0&#176;</p>
             </div>
             <!-- Sunday -->
-            <div class="m-1 flex h-28 w-20 flex-col items-center justify-between rounded-md opacity-95 backdrop-blur-3xl backdrop-filter">
+            <div
+              class="m-1 flex h-28 w-20 flex-col items-center justify-between rounded-md opacity-95 backdrop-blur-3xl backdrop-filter"
+            >
               <p class="font-semibold text-black dark:text-yellow-500">Sun</p>
               <img src="http://cdn.weatherapi.com/weather/64x64/day/113.png" class="" />
               <p class="text-black dark:text-white">0&#176;</p>
             </div>
             <!-- MOnday -->
-            <div class="m-1 flex h-28 w-20 flex-col items-center justify-between rounded-md opacity-95 backdrop-blur-3xl backdrop-filter">
+            <div
+              class="m-1 flex h-28 w-20 flex-col items-center justify-between rounded-md opacity-95 backdrop-blur-3xl backdrop-filter"
+            >
               <p class="font-semibold text-black dark:text-yellow-500">Mon</p>
               <img src="http://cdn.weatherapi.com/weather/64x64/day/113.png" class="" />
               <p class="text-black dark:text-white">0&#176;</p>
             </div>
             <!-- Tuesday-->
-            <div class="m-1 flex h-28 w-20 flex-col items-center justify-between rounded-md opacity-95 backdrop-blur-3xl backdrop-filter">
+            <div
+              class="m-1 flex h-28 w-20 flex-col items-center justify-between rounded-md opacity-95 backdrop-blur-3xl backdrop-filter"
+            >
               <p class="font-semibold text-black dark:text-yellow-500">Tue</p>
               <img src="http://cdn.weatherapi.com/weather/64x64/day/113.png" class="" />
               <p class="text-black dark:text-white">0&#176;</p>
             </div>
             <!-- wednesday -->
-            <div class="m-1 flex h-28 w-20 flex-col items-center justify-between rounded-md opacity-95 backdrop-blur-3xl backdrop-filter">
+            <div
+              class="m-1 flex h-28 w-20 flex-col items-center justify-between rounded-md opacity-95 backdrop-blur-3xl backdrop-filter"
+            >
               <p class="font-semibold text-black dark:text-yellow-500">Wed</p>
               <img src="http://cdn.weatherapi.com/weather/64x64/day/113.png" class="" />
               <p class="text-black dark:text-white">0&#176;</p>
             </div>
             <!-- Thursday -->
-            <div class="m-1 flex h-28 w-20 flex-col items-center justify-between rounded-md opacity-95 backdrop-blur-3xl backdrop-filter">
+            <div
+              class="m-1 flex h-28 w-20 flex-col items-center justify-between rounded-md opacity-95 backdrop-blur-3xl backdrop-filter"
+            >
               <p class="font-semibold text-black dark:text-yellow-500">Thu</p>
               <img src="http://cdn.weatherapi.com/weather/64x64/day/113.png" class="" />
               <p class="text-black dark:text-white">0&#176;</p>
             </div>
             <!-- Friday -->
-            <div class="m-1 flex h-28 w-20 flex-col items-center justify-between rounded-md opacity-95 backdrop-blur-3xl backdrop-filter">
+            <div
+              class="m-1 flex h-28 w-20 flex-col items-center justify-between rounded-md opacity-95 backdrop-blur-3xl backdrop-filter"
+            >
               <p class="font-semibold text-black dark:text-yellow-500">Fri</p>
               <img src="http://cdn.weatherapi.com/weather/64x64/day/113.png" class="" />
               <p class="text-black dark:text-white">0&#176;</p>
@@ -166,18 +196,26 @@
               <!-- control item -->
               <div class="grid h-full w-full gap-1 p-1 md:grid-cols-3 md:grid-rows-2">
                 <!-- Visibility -->
-                <div class="flex h-full w-full flex-row items-start justify-between rounded-md p-2 opacity-95 backdrop-blur-3xl">
+                <div
+                  class="flex h-full w-full flex-row items-start justify-between rounded-md p-2 opacity-95 backdrop-blur-3xl"
+                >
                   <div class="flex h-full flex-col justify-between">
-                    <p class="text-base font-bold text-indigo-900 dark:text-sky-300"><i class="fa-solid fa-eye mr-2"></i>Visibility</p>
+                    <p class="text-base font-bold text-indigo-900 dark:text-sky-300">
+                      <i class="fa-solid fa-eye mr-2"></i>Visibility
+                    </p>
                     <div class="flex flex-row items-baseline gap-1 text-base">
                       <p class="text-3xl text-black dark:text-white" id="Visibility">0</p>
                       <p class="text-base font-semibold text-gray-800 dark:text-red-900">km</p>
                     </div>
-                    <p id="statusVisibility" class="font-medium text-red-900 dark:text-blue-900">status</p>
+                    <p id="statusVisibility" class="font-medium text-red-900 dark:text-blue-900">
+                      status
+                    </p>
                   </div>
                   <div class="relative flex h-full w-24 items-center justify-between">
                     <!-- car -->
-                    <i class="fa-solid fa-car change-vis ] absolute bottom-1 right-[34px] z-20 -translate-y-[var(--vis)] text-3xl text-red-600 transition-transform duration-1000 ease-in-out"></i>
+                    <i
+                      class="fa-solid fa-car change-vis ] absolute bottom-1 right-[34px] z-20 -translate-y-[var(--vis)] text-3xl text-red-600 transition-transform duration-1000 ease-in-out"
+                    ></i>
                     <!-- road -->
                     <svg
                       class="h-full w-full text-indigo-900"
@@ -193,7 +231,13 @@
                       transform="rotate(0)"
                     >
                       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="7.286656000000001">
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke="#CCCCCC"
+                        stroke-width="7.286656000000001"
+                      >
                         <g>
                           <g>
                             <path
@@ -231,16 +275,26 @@
                   </div>
                 </div>
                 <!-- uv Index -->
-                <div class="flex h-28 w-full flex-row items-start justify-between rounded-md p-2 opacity-95 backdrop-blur-3xl md:h-full">
+                <div
+                  class="flex h-28 w-full flex-row items-start justify-between rounded-md p-2 opacity-95 backdrop-blur-3xl md:h-full"
+                >
                   <div class="flex h-full flex-col justify-between">
-                    <p class="text-base font-bold text-indigo-900 dark:text-sky-300"><i class="fa-brands fa-uniregistry m-2"></i>UV Index</p>
+                    <p class="text-base font-bold text-indigo-900 dark:text-sky-300">
+                      <i class="fa-brands fa-uniregistry m-2"></i>UV Index
+                    </p>
                     <div class="flex flex-row items-baseline gap-1 text-base">
                       <p class="text-3xl text-black dark:text-white" id="unIndex">0</p>
                     </div>
-                    <p class="text-base font-medium text-red-900 dark:text-blue-900" id="uvStatus">status</p>
+                    <p class="text-base font-medium text-red-900 dark:text-blue-900" id="uvStatus">
+                      status
+                    </p>
                   </div>
-                  <div class="relative flex h-24 -translate-x-16 items-center justify-center self-start md:h-full">
-                    <div class="grid-row-5 outline-3 grid h-20 w-6 bg-red-600 outline outline-offset-2 outline-red-500">
+                  <div
+                    class="relative flex h-24 -translate-x-16 items-center justify-center self-start md:h-full"
+                  >
+                    <div
+                      class="grid-row-5 outline-3 grid h-20 w-6 bg-red-600 outline outline-offset-2 outline-red-500"
+                    >
                       <div class="bg-violet-600"></div>
                       <div class="bg-red-600"></div>
                       <div class="bg-orange-600"></div>
@@ -249,20 +303,32 @@
                     </div>
 
                     <span class="absolute -right-[49px] -z-10"
-                      ><svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-yellow-400" viewBox="0 0 24 24">
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-20 w-20 text-yellow-400"
+                        viewBox="0 0 24 24"
+                      >
                         <path
                           fill="currentColor"
                           d="M12 5q-.425 0-.712-.288Q11 4.425 11 4V2q0-.425.288-.713Q11.575 1 12 1t.713.287Q13 1.575 13 2v2q0 .425-.287.712Q12.425 5 12 5Zm4.95 2.05q-.275-.275-.275-.688q0-.412.275-.712l1.4-1.425q.3-.3.712-.3q.413 0 .713.3q.275.275.275.7q0 .425-.275.7L18.35 7.05q-.275.275-.7.275q-.425 0-.7-.275ZM20 13q-.425 0-.712-.288Q19 12.425 19 12t.288-.713Q19.575 11 20 11h2q.425 0 .712.287q.288.288.288.713t-.288.712Q22.425 13 22 13Zm-8 10q-.425 0-.712-.288Q11 22.425 11 22v-2q0-.425.288-.712Q11.575 19 12 19t.713.288Q13 19.575 13 20v2q0 .425-.287.712Q12.425 23 12 23ZM5.65 7.05l-1.425-1.4q-.3-.3-.3-.725t.3-.7q.275-.275.7-.275q.425 0 .7.275L7.05 5.65q.275.275.275.7q0 .425-.275.7q-.3.275-.7.275q-.4 0-.7-.275Zm12.7 12.725l-1.4-1.425q-.275-.3-.275-.712q0-.413.275-.688q.275-.275.688-.275q.412 0 .712.275l1.425 1.4q.3.275.287.7q-.012.425-.287.725q-.3.3-.725.3t-.7-.3ZM2 13q-.425 0-.712-.288Q1 12.425 1 12t.288-.713Q1.575 11 2 11h2q.425 0 .713.287Q5 11.575 5 12t-.287.712Q4.425 13 4 13Zm2.225 6.775q-.275-.275-.275-.7q0-.425.275-.7L5.65 16.95q.275-.275.688-.275q.412 0 .712.275q.3.3.3.713q0 .412-.3.712l-1.4 1.4q-.3.3-.725.3t-.7-.3ZM12 18q-2.5 0-4.25-1.75T6 12q0-2.5 1.75-4.25T12 6q2.5 0 4.25 1.75T18 12q0 2.5-1.75 4.25T12 18Zm0-2q1.65 0 2.825-1.175Q16 13.65 16 12q0-1.65-1.175-2.825Q13.65 8 12 8q-1.65 0-2.825 1.175Q8 10.35 8 12q0 1.65 1.175 2.825Q10.35 16 12 16Zm0-4Z"
                         />
                       </svg>
-                      <i class="fa-solid fa-play change-uv absolute -left-3 bottom-0 z-10 -translate-y-[var(--uv)] text-base text-red-800 transition-transform duration-300 ease-in-out"></i>
+                      <i
+                        class="fa-solid fa-play change-uv absolute -left-3 bottom-0 z-10 -translate-y-[var(--uv)] text-base text-red-800 transition-transform duration-300 ease-in-out"
+                      ></i>
                     </span>
                   </div>
                 </div>
                 <!-- max min temperature -->
-                <div class="flex h-28 w-full flex-col items-start justify-between rounded-md p-2 opacity-95 backdrop-blur-3xl md:h-full">
-                  <p class="text-base font-bold text-indigo-900 dark:text-sky-300"><i class="fa-solid fa-temperature-high mr-2"></i>Temperature</p>
-                  <div class="ml-3 flex w-16 flex-row items-baseline justify-between gap-1 text-base max-md:mr-8 max-md:self-end">
+                <div
+                  class="flex h-28 w-full flex-col items-start justify-between rounded-md p-2 opacity-95 backdrop-blur-3xl md:h-full"
+                >
+                  <p class="text-base font-bold text-indigo-900 dark:text-sky-300">
+                    <i class="fa-solid fa-temperature-high mr-2"></i>Temperature
+                  </p>
+                  <div
+                    class="ml-3 flex w-16 flex-row items-baseline justify-between gap-1 text-base max-md:mr-8 max-md:self-end"
+                  >
                     <i class="fa-solid fa-temperature-full dark:text-sky-300"></i>
                     <p class="text-lg text-black dark:text-white">Max</p>
                     <div class="flex flex-row">
@@ -271,7 +337,9 @@
                       <p class="self-start text-sm text-red-900">c</p>
                     </div>
                   </div>
-                  <div class="ml-3 flex w-16 flex-row items-baseline justify-between gap-1 text-base max-md:mr-8 max-md:self-end">
+                  <div
+                    class="ml-3 flex w-16 flex-row items-baseline justify-between gap-1 text-base max-md:mr-8 max-md:self-end"
+                  >
                     <i class="fa-solid fa-temperature-quarter dark:text-sky-300"></i>
                     <p class="text-lg text-black dark:text-white">Min</p>
                     <div class="flex flex-row">
@@ -282,54 +350,90 @@
                   </div>
                 </div>
                 <!-- humidity -->
-                <div class="flex h-28 w-full flex-row justify-between rounded-md p-2 opacity-95 backdrop-blur-3xl md:h-full">
+                <div
+                  class="flex h-28 w-full flex-row justify-between rounded-md p-2 opacity-95 backdrop-blur-3xl md:h-full"
+                >
                   <!-- description -->
                   <div class="flex h-full flex-col justify-between">
-                    <p class="text-base font-bold text-indigo-900 dark:text-sky-300"><i class="fa-solid fa-droplet mr-2"></i>Humidity</p>
+                    <p class="text-base font-bold text-indigo-900 dark:text-sky-300">
+                      <i class="fa-solid fa-droplet mr-2"></i>Humidity
+                    </p>
                     <div class="flex flex-row items-baseline gap-1 text-base">
                       <p class="text-3xl text-black dark:text-white" id="humidity">0</p>
                       <p class="text-base font-semibold text-gray-900 dark:text-red-900">%</p>
                     </div>
-                    <p class="text-base font-medium text-red-900 dark:text-blue-900" id="statusHumidity">status</p>
+                    <p
+                      class="text-base font-medium text-red-900 dark:text-blue-900"
+                      id="statusHumidity"
+                    >
+                      status
+                    </p>
                   </div>
                   <!-- input -->
                   <div class="flex h-full -rotate-90 items-center justify-center">
-                    <input type="range" class="range-humidity pointer-events-none h-10 w-[70%] transition-transform duration-1000" />
+                    <input
+                      type="range"
+                      class="range-humidity pointer-events-none h-10 w-[70%] transition-transform duration-1000"
+                    />
                   </div>
                 </div>
                 <!-- wind status  -->
-                <div class="flex h-28 w-full flex-row items-start justify-between rounded-md p-2 opacity-95 backdrop-blur-3xl md:h-full">
+                <div
+                  class="flex h-28 w-full flex-row items-start justify-between rounded-md p-2 opacity-95 backdrop-blur-3xl md:h-full"
+                >
                   <!-- description -->
                   <div class="flex h-full flex-col justify-between">
-                    <p class="text-base font-bold text-indigo-900 dark:text-sky-300"><i class="fa-solid fa-wind mr-2"></i>Wind</p>
+                    <p class="text-base font-bold text-indigo-900 dark:text-sky-300">
+                      <i class="fa-solid fa-wind mr-2"></i>Wind
+                    </p>
                     <div class="flex flex-row items-baseline justify-between">
                       <p class="text-3xl text-black dark:text-white" id="speed">0</p>
-                      <p class="ml-2 text-base font-semibold text-gray-900 dark:text-red-900">km/h</p>
+                      <p class="ml-2 text-base font-semibold text-gray-900 dark:text-red-900">
+                        km/h
+                      </p>
                     </div>
-                    <p class="text-sm font-medium text-red-900 dark:text-blue-900" id="wind-dir">Direction</p>
+                    <p class="text-sm font-medium text-red-900 dark:text-blue-900" id="wind-dir">
+                      Direction
+                    </p>
                   </div>
                   <!-- degree wind -->
                   <div class="flex self-center pr-5">
-                    <div class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-red-800">
+                    <div
+                      class="flex h-12 w-12 items-center justify-center rounded-full border-2 border-red-800"
+                    >
                       <div class="flex -rotate-[45deg] items-center justify-center pl-1">
-                        <i class="fa-solid fa-location-arrow deg-wind rotate-[var(--deg)] text-xl transition-transform duration-1000"></i>
+                        <i
+                          class="fa-solid fa-location-arrow deg-wind rotate-[var(--deg)] text-xl transition-transform duration-1000"
+                        ></i>
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- sunset & sunrise -->
-                <div class="relative h-32 w-full rounded-md p-2 font-bold text-indigo-900 opacity-95 backdrop-blur-3xl md:h-full">
-                  <p class="absolute left-2 top-1 text-base dark:text-sky-300"><i class="fa-solid fa-sun-plant-wilt mr-2"></i>Sunset & Sunrise</p>
+                <div
+                  class="relative h-32 w-full rounded-md p-2 font-bold text-indigo-900 opacity-95 backdrop-blur-3xl md:h-full"
+                >
+                  <p class="absolute left-2 top-1 text-base dark:text-sky-300">
+                    <i class="fa-solid fa-sun-plant-wilt mr-2"></i>Sunset & Sunrise
+                  </p>
 
-                  <div class="absolute right-2 top-4 h-20 w-44 overflow-hidden md:left-10 md:top-9 md:overflow-hidden">
-                    <div class="sun-rotate absolute left-2 top-4 mx-auto h-40 w-40 rotate-[var(--rot)] rounded-full border-4 border-yellow-600 transition-transform duration-1000">
+                  <div
+                    class="absolute right-2 top-4 h-20 w-44 overflow-hidden md:left-10 md:top-9 md:overflow-hidden"
+                  >
+                    <div
+                      class="sun-rotate absolute left-2 top-4 mx-auto h-40 w-40 rotate-[var(--rot)] rounded-full border-4 border-yellow-600 transition-transform duration-1000"
+                    >
                       <div class="relative">
-                        <span class="sun-moon absolute -left-[9px] top-12 h-4 w-4 rounded-full bg-yellow-400 shadow-[0px_0px_11px_10px_#faf089]"></span>
+                        <span
+                          class="sun-moon absolute -left-[9px] top-12 h-4 w-4 rounded-full bg-yellow-400 shadow-[0px_0px_11px_10px_#faf089]"
+                        ></span>
                       </div>
                     </div>
                   </div>
 
-                  <div class="absolute right-2 bottom-1 flex flex-row gap-7 text-sm md:bottom-0 md:left-8 md:gap-10">
+                  <div
+                    class="absolute right-2 bottom-1 flex flex-row gap-7 text-sm md:bottom-0 md:left-8 md:gap-10"
+                  >
                     <p id="sunRise" class="text-base dark:text-white">00:00</p>
                     <p id="localTime" class="text-base dark:text-white">00:00</p>
                     <p id="sunSet" class="text-base dark:text-white">00:00</p>
@@ -344,14 +448,25 @@
       <!-- background -->
       <div class="absolute inset-0 h-full w-full overflow-hidden">
         <!-- day -->
-        <div class="day-mood absolute inset-0 bg-gradient-to-b from-sky-500 via-sky-600 to-blue-800 transition-all duration-300">
+        <div
+          class="day-mood absolute inset-0 bg-gradient-to-b from-sky-500 via-sky-600 to-blue-800 transition-all duration-300"
+        >
           <!--control day -->
           <div class="day-sky relative h-full w-full">
             <!-- sun -->
-            <div class="absolute right-24 top-14 h-14 w-14 rounded-full bg-[#f2ff00] shadow-[0px_0px_112px_76px_#faf089]"></div>
+            <div
+              class="absolute right-24 top-14 h-14 w-14 rounded-full bg-[#f2ff00] shadow-[0px_0px_112px_76px_#faf089]"
+            ></div>
             <!-- clouds 1 -->
             <div class="absolute top-6 left-6">
-              <svg width="400" height="237" class="text-sky-300" viewBox="0 0 613 337" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                width="400"
+                height="237"
+                class="text-sky-300"
+                viewBox="0 0 613 337"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <g filter="url(#filter0_i_12_29)">
                   <path
                     fill-rule="evenodd"
@@ -361,14 +476,35 @@
                   />
                 </g>
                 <defs>
-                  <filter id="filter0_i_12_29" x="0" y="0" width="620" height="346" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <filter
+                    id="filter0_i_12_29"
+                    x="0"
+                    y="0"
+                    width="620"
+                    height="346"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
                     <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      result="shape"
+                    />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
                     <feOffset dx="7" dy="9" />
                     <feGaussianBlur stdDeviation="9.5" />
                     <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_12_29" />
                   </filter>
                 </defs>
@@ -376,7 +512,14 @@
             </div>
             <!-- clouds 2 -->
             <div class="absolute top-6 right-24">
-              <svg width="400" height="237" class="text-sky-300" viewBox="0 0 613 337" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                width="400"
+                height="237"
+                class="text-sky-300"
+                viewBox="0 0 613 337"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <g filter="url(#filter0_i_12_29)">
                   <path
                     fill-rule="evenodd"
@@ -386,14 +529,35 @@
                   />
                 </g>
                 <defs>
-                  <filter id="filter0_i_12_29" x="0" y="0" width="620" height="346" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <filter
+                    id="filter0_i_12_29"
+                    x="0"
+                    y="0"
+                    width="620"
+                    height="346"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
                     <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      result="shape"
+                    />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
                     <feOffset dx="7" dy="9" />
                     <feGaussianBlur stdDeviation="9.5" />
                     <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_12_29" />
                   </filter>
                 </defs>
@@ -401,7 +565,14 @@
             </div>
             <!-- clouds 3 -->
             <div class="absolute bottom-6 right-0">
-              <svg width="413" height="337" viewBox="0 0 613 337" class="text-sky-300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                width="413"
+                height="337"
+                viewBox="0 0 613 337"
+                class="text-sky-300"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <g filter="url(#filter0_i_12_29)">
                   <path
                     fill-rule="evenodd"
@@ -411,14 +582,35 @@
                   />
                 </g>
                 <defs>
-                  <filter id="filter0_i_12_29" x="0" y="0" width="620" height="346" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <filter
+                    id="filter0_i_12_29"
+                    x="0"
+                    y="0"
+                    width="620"
+                    height="346"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
                     <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      result="shape"
+                    />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
                     <feOffset dx="7" dy="9" />
                     <feGaussianBlur stdDeviation="9.5" />
                     <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_12_29" />
                   </filter>
                 </defs>
@@ -426,7 +618,14 @@
             </div>
             <!-- clouds 3-2 -->
             <div class="absolute -bottom-6 right-[40%]">
-              <svg width="400" height="237" class="text-sky-300" viewBox="0 0 613 337" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                width="400"
+                height="237"
+                class="text-sky-300"
+                viewBox="0 0 613 337"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <g filter="url(#filter0_i_12_29)">
                   <path
                     fill-rule="evenodd"
@@ -436,14 +635,35 @@
                   />
                 </g>
                 <defs>
-                  <filter id="filter0_i_12_29" x="0" y="0" width="620" height="346" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <filter
+                    id="filter0_i_12_29"
+                    x="0"
+                    y="0"
+                    width="620"
+                    height="346"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
                     <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      result="shape"
+                    />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
                     <feOffset dx="7" dy="9" />
                     <feGaussianBlur stdDeviation="9.5" />
                     <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_12_29" />
                   </filter>
                 </defs>
@@ -451,7 +671,14 @@
             </div>
             <!-- clouds 4 -->
             <div class="absolute bottom-6 -left-2">
-              <svg width="308" height="246" class="text-sky-300" viewBox="0 0 508 246" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                width="308"
+                height="246"
+                class="text-sky-300"
+                viewBox="0 0 508 246"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <g filter="url(#filter0_i_11_8)">
                   <ellipse cx="102.5" cy="145.5" rx="102.5" ry="100.5" fill="currentColor" />
                   <ellipse cx="259.5" cy="100.5" rx="102.5" ry="100.5" fill="currentColor" />
@@ -460,14 +687,35 @@
                   <rect x="102" y="156" width="334" height="90" fill="currentColor" />
                 </g>
                 <defs>
-                  <filter id="filter0_i_11_8" x="0" y="0" width="520" height="251" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <filter
+                    id="filter0_i_11_8"
+                    x="0"
+                    y="0"
+                    width="520"
+                    height="251"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
                     <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      result="shape"
+                    />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
                     <feOffset dx="12" dy="5" />
                     <feGaussianBlur stdDeviation="7.5" />
                     <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.18 0"
+                    />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_11_8" />
                   </filter>
                 </defs>
@@ -475,7 +723,14 @@
             </div>
             <!-- clouds 5 -->
             <div class="absolute -top-32 right-[46%]">
-              <svg width="400" height="237" class="text-sky-300" viewBox="0 0 613 337" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg
+                width="400"
+                height="237"
+                class="text-sky-300"
+                viewBox="0 0 613 337"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <g filter="url(#filter0_i_12_29)">
                   <path
                     fill-rule="evenodd"
@@ -485,14 +740,35 @@
                   />
                 </g>
                 <defs>
-                  <filter id="filter0_i_12_29" x="0" y="0" width="620" height="346" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <filter
+                    id="filter0_i_12_29"
+                    x="0"
+                    y="0"
+                    width="620"
+                    height="346"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
                     <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="BackgroundImageFix"
+                      result="shape"
+                    />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
                     <feOffset dx="7" dy="9" />
                     <feGaussianBlur stdDeviation="9.5" />
                     <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
-                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
                     <feBlend mode="normal" in2="shape" result="effect1_innerShadow_12_29" />
                   </filter>
                 </defs>
@@ -502,25 +778,50 @@
         </div>
 
         <!-- night -->
-        <div class="night-mood absolute inset-0 hidden bg-gradient-to-b from-slate-900 via-neutral-800 to-indigo-800 transition-all duration-300">
+        <div
+          class="night-mood absolute inset-0 hidden bg-gradient-to-b from-slate-900 via-neutral-800 to-indigo-800 transition-all duration-300"
+        >
           <!-- control night -->
           <div class="night-sky relative h-full w-full">
             <!-- moon -->
-            <span class="fa-solid fa-moon absolute right-9 top-8 z-20 -rotate-2 text-[128px] text-indigo-500"></span>
+            <span
+              class="fa-solid fa-moon absolute right-9 top-8 z-20 -rotate-2 text-[128px] text-indigo-500"
+            ></span>
 
-            <img src="./src/img/sky/cloud1.png" class="absolute top-0 right-[0px] z-30 max-w-[600px] animate-[animate-cloud_45s_ease-in-out_0s_infinite]" />
+            <img
+              src="./src/img/sky/cloud1.png"
+              class="absolute top-0 right-[0px] z-30 max-w-[600px] animate-[animate-cloud_45s_ease-in-out_0s_infinite]"
+            />
 
-            <img src="./src/img/sky/cloud1.png" class="absolute top-20 right-[0px] z-30 max-w-[600px] animate-[animate-cloud_30s_ease-in-out_-5s_infinite]" />
+            <img
+              src="./src/img/sky/cloud1.png"
+              class="absolute top-20 right-[0px] z-30 max-w-[600px] animate-[animate-cloud_30s_ease-in-out_-5s_infinite]"
+            />
 
-            <img src="./src/img/sky/cloud3.png" class="absolute top-10 right-[0px] z-30 max-w-[700px] animate-[animate-cloud_55s_ease-in-out_-10s_infinite]" />
+            <img
+              src="./src/img/sky/cloud3.png"
+              class="absolute top-10 right-[0px] z-30 max-w-[700px] animate-[animate-cloud_55s_ease-in-out_-10s_infinite]"
+            />
 
-            <img src="./src/img/sky/cloud1.png" class="absolute bottom-10 right-[0px] z-30 max-w-[700px] animate-[animate-cloud_65s_ease-in-out_-15s_infinite]" />
+            <img
+              src="./src/img/sky/cloud1.png"
+              class="absolute bottom-10 right-[0px] z-30 max-w-[700px] animate-[animate-cloud_65s_ease-in-out_-15s_infinite]"
+            />
 
-            <img src="./src/img/sky/cloud2.png" class="absolute top-40 right-[0px] z-30 max-w-[500px] animate-[animate-cloud_35s_ease-in-out_-10s_infinite]" />
+            <img
+              src="./src/img/sky/cloud2.png"
+              class="absolute top-40 right-[0px] z-30 max-w-[500px] animate-[animate-cloud_35s_ease-in-out_-10s_infinite]"
+            />
 
-            <img src="./src/img/sky/cloud2.png" class="absolute bottom-5 right-[0px] z-30 max-w-[500px] animate-[animate-cloud_50s_ease-in-out_-5s_infinite]" />
+            <img
+              src="./src/img/sky/cloud2.png"
+              class="absolute bottom-5 right-[0px] z-30 max-w-[500px] animate-[animate-cloud_50s_ease-in-out_-5s_infinite]"
+            />
 
-            <img src="./src/img/sky/cloud3.png" class="absolute top-96 right-[0px] z-30 max-w-[500px] animate-[animate-cloud_55s_ease-in-out_-10s_infinite]" />
+            <img
+              src="./src/img/sky/cloud3.png"
+              class="absolute top-96 right-[0px] z-30 max-w-[500px] animate-[animate-cloud_55s_ease-in-out_-10s_infinite]"
+            />
 
             <!-- end -->
           </div>
