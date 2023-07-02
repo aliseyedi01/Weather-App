@@ -146,7 +146,7 @@
                   <div class="relative flex h-full w-24 items-center justify-between">
                     <!-- car -->
                     <i
-                      class="fa-solid fa-car change-vis ] absolute bottom-1 right-[34px] z-20 -translate-y-[var(--vis)] text-3xl text-red-600 transition-transform duration-1000 ease-in-out"
+                      class="fa-solid fa-car change-vis absolute bottom-1 right-[34px] z-20 -translate-y-[var(--vis)] text-3xl text-red-600 transition-transform duration-1000 ease-in-out"
                     ></i>
                     <!-- road -->
                     <img
@@ -197,32 +197,22 @@
                   </div>
                 </div>
                 <!-- max min temperature -->
-                <div
-                  class="flex h-28 w-full flex-col items-start justify-between rounded-md p-2 opacity-95 backdrop-blur-3xl md:h-full"
-                >
-                  <p class="text-base font-bold text-indigo-900 dark:text-sky-300">
-                    <i class="fa-solid fa-temperature-high mr-2"></i>Temperature
-                  </p>
-                  <div
-                    class="ml-3 flex w-16 flex-row items-baseline justify-between gap-1 text-base max-md:mr-8 max-md:self-end"
-                  >
-                    <i class="fa-solid fa-temperature-full dark:text-sky-300"></i>
-                    <p class="text-lg text-black dark:text-white">Max</p>
-                    <div class="flex flex-row">
-                      <p class="ml-1 text-base text-black dark:text-white" id="maxTemp">0</p>
-                      <p class="self-start text-xs text-red-900">°</p>
-                      <p class="self-start text-sm text-red-900">c</p>
+                <div class="temperature-card">
+                  <p class="temperature-title">Temperature</p>
+                  <div class="temperature-info">
+                    <i class="fa-solid fa-temperature-full"></i>
+                    <p class="temperature-label">Max</p>
+                    <div class="temperature-value">
+                      <p id="maxTemp" class="temperature-number">0</p>
+                      <p class="temperature-unit">°c</p>
                     </div>
                   </div>
-                  <div
-                    class="ml-3 flex w-16 flex-row items-baseline justify-between gap-1 text-base max-md:mr-8 max-md:self-end"
-                  >
-                    <i class="fa-solid fa-temperature-quarter dark:text-sky-300"></i>
-                    <p class="text-lg text-black dark:text-white">Min</p>
-                    <div class="flex flex-row">
-                      <p class="ml-1 text-base text-black dark:text-white" id="minTemp">0</p>
-                      <p class="self-start text-xs text-red-900">°</p>
-                      <p class="self-start text-sm text-red-900">c</p>
+                  <div class="temperature-info">
+                    <i class="fa-solid fa-temperature-quarter"></i>
+                    <p class="temperature-label">Min</p>
+                    <div class="temperature-value">
+                      <p id="minTemp" class="temperature-number">0</p>
+                      <p class="temperature-unit">°c</p>
                     </div>
                   </div>
                 </div>

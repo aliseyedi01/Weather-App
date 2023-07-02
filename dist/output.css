@@ -552,6 +552,8 @@ video {
   }
 }
 
+/* week days */
+
 .active-btn {
   border-bottom-width: 2px;
   --tw-border-opacity: 1;
@@ -589,6 +591,99 @@ video {
 .dark .week-days p {
   --tw-text-opacity: 1;
   color: rgb(234 179 8 / var(--tw-text-opacity));
+}
+
+/* temperature */
+
+.temperature-card {
+  display: flex;
+  height: 7rem;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  opacity: 0.95;
+  --tw-backdrop-blur: blur(64px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+@media (min-width: 768px) {
+  .temperature-card {
+    height: 100%;
+  }
+}
+
+.temperature-title {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(49 46 129 / var(--tw-text-opacity));
+}
+
+.dark .temperature-title {
+  --tw-text-opacity: 1;
+  color: rgb(125 211 252 / var(--tw-text-opacity));
+}
+
+.temperature-info {
+  margin-left: 0.75rem;
+  display: flex;
+  width: 4rem;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+@media not all and (min-width: 768px) {
+  .temperature-info {
+    margin-right: 2rem;
+    align-self: flex-end;
+  }
+}
+
+.temperature-label {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.dark .temperature-label {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.temperature-value {
+  display: flex;
+  flex-direction: row;
+}
+
+.temperature-number {
+  margin-left: 0.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.dark .temperature-number {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.temperature-unit {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(127 29 29 / var(--tw-text-opacity));
 }
 
 .sr-only {
@@ -839,10 +934,6 @@ video {
   margin-left: 0.5rem;
 }
 
-.ml-3 {
-  margin-left: 0.75rem;
-}
-
 .mr-1 {
   margin-right: 0.25rem;
 }
@@ -1022,10 +1113,6 @@ video {
 
 .w-14 {
   width: 3.5rem;
-}
-
-.w-16 {
-  width: 4rem;
 }
 
 .w-20 {
@@ -2237,10 +2324,6 @@ video {
   fill: currentColor;
 }
 
-.fill-cyan-300 {
-  fill: #67e8f9;
-}
-
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -2527,6 +2610,11 @@ video {
   color: rgb(99 102 241 / var(--tw-text-opacity));
 }
 
+.text-indigo-700 {
+  --tw-text-opacity: 1;
+  color: rgb(67 56 202 / var(--tw-text-opacity));
+}
+
 .text-indigo-900 {
   --tw-text-opacity: 1;
   color: rgb(49 46 129 / var(--tw-text-opacity));
@@ -2564,11 +2652,6 @@ video {
 .text-yellow-600 {
   --tw-text-opacity: 1;
   color: rgb(202 138 4 / var(--tw-text-opacity));
-}
-
-.text-indigo-700 {
-  --tw-text-opacity: 1;
-  color: rgb(67 56 202 / var(--tw-text-opacity));
 }
 
 .text-opacity-10 {
@@ -2922,20 +3005,10 @@ video {
   transition-duration: 150ms;
 }
 
-.transition-opacity {
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .transition-transform {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-
-.duration-100 {
-  transition-duration: 100ms;
 }
 
 .duration-1000 {
@@ -3456,18 +3529,6 @@ input[type="range"]::-ms-fill-upper {
 }
 
 @media not all and (min-width: 768px) {
-  .max-md\:fixed {
-    position: fixed;
-  }
-
-  .max-md\:left-4 {
-    left: 1rem;
-  }
-
-  .max-md\:top-12 {
-    top: 3rem;
-  }
-
   .max-md\:ml-4 {
     margin-left: 1rem;
   }
@@ -3476,16 +3537,8 @@ input[type="range"]::-ms-fill-upper {
     margin-left: 26%;
   }
 
-  .max-md\:mr-8 {
-    margin-right: 2rem;
-  }
-
   .max-md\:mt-2 {
     margin-top: 0.5rem;
-  }
-
-  .max-md\:self-end {
-    align-self: flex-end;
   }
 
   .max-md\:pt-5 {

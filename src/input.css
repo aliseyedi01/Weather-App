@@ -9,6 +9,7 @@
 }
 
 @layer components {
+  /* week days */
   .active-btn {
     @apply border-b-2 border-red-900 text-yellow-400 dark:text-yellow-400;
   }
@@ -17,6 +18,34 @@
   }
   .week-days p {
     @apply font-semibold text-black dark:text-yellow-500;
+  }
+  /* temperature */
+  .temperature-card {
+    @apply flex h-28 w-full flex-col items-start justify-between rounded-md p-2 opacity-95 backdrop-blur-3xl md:h-full;
+  }
+
+  .temperature-title {
+    @apply text-base font-bold text-indigo-900 dark:text-sky-300;
+  }
+
+  .temperature-info {
+    @apply ml-3 flex w-16 flex-row items-baseline justify-between gap-1 text-base max-md:mr-8 max-md:self-end;
+  }
+
+  .temperature-label {
+    @apply text-lg text-black dark:text-white;
+  }
+
+  .temperature-value {
+    @apply flex flex-row;
+  }
+
+  .temperature-number {
+    @apply ml-1 text-base text-black dark:text-white;
+  }
+
+  .temperature-unit {
+    @apply self-start text-xs text-red-900;
   }
 }
 
