@@ -2233,6 +2233,14 @@ video {
   background-origin: content-box;
 }
 
+.fill-current {
+  fill: currentColor;
+}
+
+.fill-cyan-300 {
+  fill: #67e8f9;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -2556,6 +2564,11 @@ video {
 .text-yellow-600 {
   --tw-text-opacity: 1;
   color: rgb(202 138 4 / var(--tw-text-opacity));
+}
+
+.text-indigo-700 {
+  --tw-text-opacity: 1;
+  color: rgb(67 56 202 / var(--tw-text-opacity));
 }
 
 .text-opacity-10 {
