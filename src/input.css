@@ -47,6 +47,22 @@
   .temperature-unit {
     @apply self-start text-xs text-red-900;
   }
+  /* btn week & month */
+  .btn-container {
+    @apply flex flex-row max-md:mt-2;
+  }
+
+  .btn {
+    @apply cursor-pointer px-1 py-1 font-serif text-xs font-semibold text-yellow-600 md:px-3 md:text-base;
+  }
+
+  .hourly-btn {
+    @apply active-btn focus:bg-blue-800;
+  }
+
+  .weekly-btn {
+    @apply focus:bg-blue-700;
+  }
 }
 
 /* input custom  */
