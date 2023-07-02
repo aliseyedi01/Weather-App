@@ -419,7 +419,7 @@ starSky();
 function daySky() {
   const daySky = document.querySelector(".day-sky");
 
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 3; i++) {
     let bird = document.createElement("img");
     let duration = Math.random() * 10;
     let top = Math.floor(Math.random() * 700 + 1) + "px";
@@ -427,6 +427,8 @@ function daySky() {
     bird.style.top = top;
     bird.style.animationDuration = 5 + duration + "s";
     bird.style.animationDelay = duration + "s";
+
+    // bird.src = "./img/sky/bird.gif";
 
     daySky.appendChild(bird);
   }

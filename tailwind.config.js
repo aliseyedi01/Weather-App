@@ -28,5 +28,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require("prettier-plugin-tailwindcss"), require("tailwind-scrollbar")({ nocompatible: true })],
+  plugins: [
+    require("prettier-plugin-tailwindcss"),
+    require("tailwind-scrollbar")({ nocompatible: true }),
+  ],
 };

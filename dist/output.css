@@ -1121,6 +1121,10 @@ video {
   height: 0.25rem;
 }
 
+.h-1\/4 {
+  height: 25%;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -1141,10 +1145,6 @@ video {
   height: 6rem;
 }
 
-.h-28 {
-  height: 7rem;
-}
-
 .h-3\/4 {
   height: 75%;
 }
@@ -1159,10 +1159,6 @@ video {
 
 .h-40 {
   height: 10rem;
-}
-
-.h-\[25\%\] {
-  height: 25%;
 }
 
 .h-\[60\%\] {
@@ -1180,14 +1176,6 @@ video {
 .h-max {
   height: -moz-max-content;
   height: max-content;
-}
-
-.\!h-32 {
-  height: 8rem !important;
-}
-
-.h-1\/4 {
-  height: 25%;
 }
 
 .w-1 {
@@ -3362,29 +3350,31 @@ input[type="range"]::-ms-fill-upper {
 
 /* bird day sky */
 
-/* .day-sky img {
+.day-sky img {
   position: absolute;
-  background: url(./src/img/sky/bird.gif) no-repeat;
-  background-size: 55%;
+  background-image: url("../src/img/sky/bird.gif");
+  background-size: cover;
   left: -150px;
   padding: 60px;
   height: 2rem;
   width: 2rem;
-  border-image: none;
+  -o-border-image: none;
+     border-image: none;
   border: none !important;
   opacity: 0.7;
   animation: bird 25s linear infinite;
   z-index: 90000;
-} */
+}
 
-/* @keyframes bird {
+@keyframes bird {
   from {
     left: -180px;
   }
+
   to {
     left: 200%;
   }
-} */
+}
 
 @media (min-width: 640px) {
   .sm\:container {
@@ -3513,11 +3503,6 @@ input[type="range"]::-ms-fill-upper {
 .dark .dark\:text-red-900 {
   --tw-text-opacity: 1;
   color: rgb(127 29 29 / var(--tw-text-opacity));
-}
-
-.dark .dark\:text-sky-100 {
-  --tw-text-opacity: 1;
-  color: rgb(224 242 254 / var(--tw-text-opacity));
 }
 
 .dark .dark\:text-sky-300 {
