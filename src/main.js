@@ -13,7 +13,6 @@ const dayMood = document.querySelector(".day-mood");
 // dark mode
 const darkIcon = document.querySelector(".dark-icon");
 const lightIcon = document.querySelector(".light-icon");
-const themeToggle = document.querySelector(".theme-toggle");
 const userTheme = localStorage.getItem("theme");
 const systemTheme = window.matchMedia("(prefers-color-scheme : dark").matches;
 // forecast
@@ -35,23 +34,6 @@ const themeCheck = () => {
   }
   lightIcon.classList.add("hidden");
 };
-// dark mode : call theme switch on clicking buttons
-themeToggle.addEventListener("click", () => {
-  if (document.documentElement.classList.contains("dark")) {
-    document.documentElement.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-    darkIcon.classList.toggle("hidden");
-    lightIcon.classList.toggle("hidden");
-    return;
-  }
-  {
-    document.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-    darkIcon.classList.toggle("hidden");
-    lightIcon.classList.toggle("hidden");
-  }
-});
-themeCheck();
 
 // WithOut API ------------
 //day today
