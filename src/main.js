@@ -428,8 +428,6 @@ function daySky() {
     bird.style.animationDuration = 5 + duration + "s";
     bird.style.animationDelay = duration + "s";
 
-    // bird.src = "./img/sky/bird.gif";
-
     daySky.appendChild(bird);
   }
 }
@@ -483,7 +481,7 @@ weekNames.map((weekName) => {
   daysWeek.innerHTML = `
       <div class="week-days">
         <p>${weekName}</p>
-        <img src="http://cdn.weatherapi.com/weather/64x64/day/113.png" />
+        <img src="./src/img/weather/sunImage.webp" />
         <p class="text-black dark:text-white">0&#176;</p>
       </div>
     `;
