@@ -23,7 +23,11 @@ const weekDayContainer = document.querySelector(".week-days-container");
 // sunset & sunrise
 const sunRotate = document.querySelector(".sun-rotate");
 // key Api
-const API_KEY2 = `8e9f91f36f3446df82b94432231502`;
+const weatherKey = "8e9f91f36f3446df82b94432231502";
+let unsplashKey = "dUvoxhzRH5e6sjuQGR157Z9AdYihZEaj6-_bw6NvYIc";
+
+console.log(weatherKey);
+console.log(unsplashKey);
 
 // dark mode : theme check
 const themeCheck = () => {
@@ -63,7 +67,7 @@ async function forecastDay(e) {
   const city = document.querySelector(".get-city").value;
 
   try {
-    const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY2}&q=${city}&days=7&aqi=no&alerts=no`;
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${weatherKey}&q=${city}&days=7&aqi=no&alerts=no`;
     const response = await fetch(url);
 
     if (!response.ok) {
@@ -450,7 +454,6 @@ function descriptionImage(data) {
   weatherImage.setAttribute("src", newSrcImg);
 }
 
-let keyUnsplash = "dUvoxhzRH5e6sjuQGR157Z9AdYihZEaj6-_bw6NvYIc";
 searchBtn.addEventListener("click", searchImage);
 let searchImg = document.querySelector(".search-Image");
 
@@ -459,7 +462,7 @@ let searchImg = document.querySelector(".search-Image");
 async function searchImage() {
   const city = document.querySelector(".get-city").value;
 
-  const url = `https://api.unsplash.com/search/photos?query=${city}&per_page=30&client_id=${keyUnsplash}`;
+  const url = `https://api.unsplash.com/search/photos?query=${city}&per_page=30&client_id=${unsplashKey}`;
 
   // fetch
   const response = await fetch(url);

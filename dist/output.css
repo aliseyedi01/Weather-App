@@ -1113,12 +1113,12 @@ video {
   display: list-item;
 }
 
-.hidden {
-  display: none;
-}
-
 .\!hidden {
   display: none !important;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-1 {
@@ -3707,10 +3707,6 @@ input[type="range"]::-ms-fill-upper {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-\[128px\] {
-    font-size: 128px;
   }
 
   .md\:backdrop-blur-2xl {
